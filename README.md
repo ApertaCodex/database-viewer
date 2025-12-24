@@ -1,38 +1,79 @@
-# Database Viewer VS Code Extension
+# Database Viewer
 
-A VS Code extension that allows you to easily connect to SQLite and MongoDB databases, view data, sort, and filter rows.
+A powerful VS Code extension for viewing, filtering, and exploring SQLite and MongoDB databases with an intuitive interface and smart filtering capabilities.
 
-## Features
+## ✨ Features
 
 - **SQLite Support**: Connect to SQLite database files (.db, .sqlite, .sqlite3)
 - **MongoDB Support**: Connect to MongoDB instances using connection strings
-- **Data Grid View**: Interactive data grid with sorting and filtering capabilities
-- **Tree View Explorer**: Browse databases and their tables/collections in the explorer
-- **Persistent Connections**: Save database connections in VS Code settings
+- **Smart Filters**:
+  - **Numbers**: Use operators like `>100`, `<50`, `>=10`, `<=20`, `10-20` (range)
+  - **Dates**: Filter with `>2024-01-01`, `<2024-12-31`, `2024-01-01 to 2024-12-31` (range)
+  - **Text**: Simple substring matching
+- **Interactive Data Grid**:
+  - Click column headers to sort
+  - Per-column filtering with search icon
+  - Pagination for large datasets
+  - Syntax-highlighted values (numbers, strings, booleans, null)
+- **Tree View Explorer**: Browse databases and their tables/collections in the sidebar
+- **Persistent Connections**: Automatically save and restore database connections
+- **Auto-Open SQLite Files**: Automatically detect and open .db files when clicked
 
-## Installation
+## 📸 Screenshots
 
-1. Clone this repository
-2. Run `npm install` to install dependencies
-3. Run `npm run compile` to build the extension
-4. Open the directory in VS Code
-5. Press F5 to launch the extension in a new Extension Development Host window
+![Data Grid View](screenshots/data-grid.png)
+*Interactive data grid with sorting and filtering*
 
-## Usage
+![Number Filter](screenshots/number-filter.png)
+*Smart filtering for number columns with operators*
+
+![Date Filter](screenshots/date-filter.png)
+*Date filtering with ranges and comparison operators*
+
+## 🚀 Installation
+
+Install from the VS Code Marketplace:
+```
+ext install mmoussa.database-viewer
+```
+
+Or search for "Database Viewer" in the Extensions view (Ctrl+Shift+X).
+
+## 📖 Usage
 
 ### Adding Database Connections
 
-1. Open the Database Explorer in the VS Code sidebar
-2. Click the "Add SQLite Database" button to connect to SQLite files
-3. Click the "Add MongoDB Connection" button to connect to MongoDB instances
+1. Open the **Database Explorer** in the VS Code sidebar (database icon)
+2. Click the **database icon** (➕) to add a SQLite database
+3. Click the **server icon** to add a MongoDB connection
+4. Or simply **open any .db file** - it will be added automatically!
 
-### Viewing Data
+### Viewing and Filtering Data
 
-1. Expand a database connection in the explorer
-2. Click on a table/collection to view its data
-3. Use the search box to filter data
-4. Click column headers to sort data
-5. Navigate through pages using the pagination controls
+1. **Expand** a database connection in the explorer
+2. **Click** on a table/collection to view its data
+3. **Click the filter icon** (🔍) on any column header to filter:
+   - **For numbers**: Type `>100`, `<50`, `>=10`, `10-20`, etc.
+   - **For dates**: Type `>2024-01-01`, `2024-01-01 to 2024-12-31`, etc.
+   - **For text**: Type any substring to search
+4. **Press Enter** or click the **🔍 button** to apply the filter
+5. **Click column headers** to sort ascending/descending
+6. Use **pagination controls** at the bottom to navigate large datasets
+
+### Filter Examples
+
+**Number Filters:**
+- `>100` - Greater than 100
+- `<50` - Less than 50
+- `>=10` - Greater than or equal to 10
+- `10-20` - Between 10 and 20 (range)
+- `!=5` - Not equal to 5
+
+**Date Filters:**
+- `>2024-01-01` - After January 1, 2024
+- `<2024-12-31` - Before December 31, 2024
+- `2024-01-01 to 2024-12-31` - Date range
+- `2024-06` - Contains "2024-06" (partial match)
 
 ## Configuration
 

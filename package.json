@@ -2,7 +2,7 @@
     "name": "database-viewer",
     "displayName": "Database Viewer",
     "description": "View, sort, and filter SQLite and MongoDB databases in VS Code",
-    "version": "0.0.172",
+    "version": "0.0.176",
     "publisher": "mmoussa",
     "icon": "icon.png",
     "categories": [
@@ -30,13 +30,7 @@
     },
     "activationEvents": [
         "onStartupFinished",
-        "onView:databaseExplorer",
-        "onCommand:databaseViewer.addSQLite",
-        "onCommand:databaseViewer.addMongoDB",
-        "onCommand:databaseViewer.refresh",
-        "onCommand:databaseViewer.openSQLiteFile",
-        "onCommand:databaseViewer.viewData",
-        "onCommand:databaseViewer.removeConnection"
+        "onView:databaseExplorer"
     ],
     "main": "./out/extension.js",
     "contributes": {

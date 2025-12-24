@@ -4,3 +4,4 @@ out/
 .vscode-test/
 .snapshots/
 package-lock.json
+.env

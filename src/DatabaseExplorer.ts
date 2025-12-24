@@ -276,7 +276,6 @@ export class DatabaseExplorer {
                     text-align: left;
                     border-bottom: 1px solid var(--border-color);
                     vertical-align: top;
-                    word-break: break-word;
                 }
 
                 th {
@@ -291,6 +290,11 @@ export class DatabaseExplorer {
                     transition: background-color 0.2s;
                     position: relative;
                     padding-bottom: 0;
+                    white-space: nowrap;
+                }
+
+                td {
+                    word-break: break-word;
                 }
 
                 .column-filter {
